@@ -4,22 +4,20 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Product name="laptop" price="50000"></Product>
+        <Product name="phone" price="15000"></Product>
+        <Product name="watch" price="5000"></Product>
+        <Product name="headphone" price="500"></Product>
     </div>
   );
 }
 
+function Product(props) {
+  return (
+    <div className="product">
+      <h1>Name: {props.name}</h1>
+      <h4>Price: {props.price}</h4>
+    </div>
+  );
+}
 export default App;
