@@ -1,25 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-        <Product name="laptop" price="50000"></Product>
-        <Product name="phone" price="15000"></Product>
-        <Product name="watch" price="5000"></Product>
-        <Product name="headphone" price="500"></Product>
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div className="App">
+//         <Product name="laptop" price="50000"></Product>
+//         <Product name="phone" price="15000"></Product>
+//         <Product name="watch" price="5000"></Product>
+//         <Product name="headphone" price="500"></Product>
+//     </div>
+//   );
+// }
 
-function Product(props) {
-  return (
-    <div className="product">
-      <h1>Name: {props.name}</h1>
-      <h4>Price: {props.price}</h4>
-    </div>
-  );
-}
+// function Product(props) {
+//   return (
+//     <div className="product">
+//       <h1>Name: {props.name}</h1>
+//       <h4>Price: {props.price}</h4>
+//     </div>
+//   );
+// }
 
 // or
 
@@ -49,5 +50,29 @@ function Product(props) {
 //     </div>
 //   );
 // }
+
+
+function App() {
+  return (
+    <div className="App">
+      <Counter></Counter>
+    </div>
+  );
+}
+
+function Counter() {
+  const [count, setCount] = useState(50);
+
+  const increaseCount = () =>{
+  const newCount = count + 1;
+  setCount(newCount);
+  }
+  return (
+    <div>
+      <h1>Count : {count}</h1>
+      <button onClick={increaseCount}>Increase</button>
+    </div>
+  );
+}
 
 export default App;

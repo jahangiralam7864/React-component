@@ -16,3 +16,7 @@
   transition: 0.8s;
   color: rgb(70, 5, 5);
 }
+.buttonStyle{
+  color: red;
+  background-color: green;
+}
