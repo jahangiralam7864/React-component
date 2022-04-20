@@ -20,3 +20,11 @@
   color: red;
   background-color: green;
 }
+.styling{
+  background-color: green;
+  width: 50%;
+  margin: auto;
+  border: 2px solid red;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
